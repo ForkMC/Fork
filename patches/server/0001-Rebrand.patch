@@ -27,9 +27,18 @@ index 59b94c7a3ca821c90adea832f97ece8a32f65034..32b3498ba263a92f1f720875618e4f39
              "Specification-Title" to "Bukkit",
              "Specification-Version" to project.version,
 diff --git a/src/main/java/com/destroystokyo/paper/PaperVersionFetcher.java b/src/main/java/com/destroystokyo/paper/PaperVersionFetcher.java
-index 462a6eed350fd660ddaf25d567bb6e97b77d0b2b..3911d33d4f1a4b0b77b8fcb2af1e3e909adac375 100644
+index 462a6eed350fd660ddaf25d567bb6e97b77d0b2b..cca6758a92dcb31162ddbda6f4f45751141ae348 100644
 --- a/src/main/java/com/destroystokyo/paper/PaperVersionFetcher.java
 +++ b/src/main/java/com/destroystokyo/paper/PaperVersionFetcher.java
+@@ -20,7 +20,7 @@ import java.util.stream.StreamSupport;
+ public class PaperVersionFetcher implements VersionFetcher {
+     private static final java.util.regex.Pattern VER_PATTERN = java.util.regex.Pattern.compile("^([0-9\\.]*)\\-.*R"); // R is an anchor, will always give '-R' at end
+     // Purpur start
+-    private static final String DOWNLOAD_PAGE = "https://purpurmc.org/downloads";
++    private static final String DOWNLOAD_PAGE = "https://github.com/ForkMC/Fork/releases/latest"; // Fork
+     private static int distance = -2; public int distance() { return distance; }
+     // Purpur end
+     private static @Nullable String mcVer;
 @@ -33,8 +33,8 @@ public class PaperVersionFetcher implements VersionFetcher {
      @Nonnull
      @Override
