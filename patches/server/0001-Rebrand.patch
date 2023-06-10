@@ -95,7 +95,7 @@ index be8b44daa0141151c973917a774aa07721647ed1..e3e29e33dd77ce4a775fc9e80fb0603f
      }
  
 -    public static String serverModName = "Purpur";
-+    public static String serverModName = "Fork ver/1.20";
++    public static String serverModName = "Fork";
      private static void serverModName() {
 -        serverModName = getString("settings.server-mod-name", serverModName);
 +        serverModName = serverModName; // Fork
