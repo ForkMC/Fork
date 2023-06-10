@@ -1,0 +1,68 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: AshlynDev <mail@ashlyn.nl>
+Date: Sat, 10 Jun 2023 16:23:23 +0200
+Subject: [PATCH] Fork Command
+
+
+diff --git a/src/main/java/org/purpurmc/purpur/command/PurpurCommand.java b/src/main/java/net/wondersmc/fork/command/ForkCommand.java
+similarity index 87%
+rename from src/main/java/org/purpurmc/purpur/command/PurpurCommand.java
+rename to src/main/java/net/wondersmc/fork/command/ForkCommand.java
+index 2621e54879e9ab0029a875f1d09eee67878b90d5..8d7b8936526af080589ffcbcf0a65b5489819756 100644
+--- a/src/main/java/org/purpurmc/purpur/command/PurpurCommand.java
++++ b/src/main/java/net/wondersmc/fork/command/ForkCommand.java
+@@ -1,4 +1,4 @@
+-package org.purpurmc.purpur.command;
++package net.wondersmc.fork.command;
+ 
+ import net.minecraft.server.MinecraftServer;
+ import net.minecraft.server.level.ServerLevel;
+@@ -14,12 +14,12 @@ import java.util.List;
+ import java.util.stream.Collectors;
+ import java.util.stream.Stream;
+ 
+-public class PurpurCommand extends Command {
+-    public PurpurCommand(String name) {
++public class ForkCommand extends Command {
++    public ForkCommand(String name) {
+         super(name);
+-        this.description = "Purpur related commands";
+-        this.usageMessage = "/purpur [reload | version]";
+-        this.setPermission("bukkit.command.purpur");
++        this.description = "Fork related commands";
++        this.usageMessage = "/fork [reload | version]";
++        this.setPermission("bukkit.command.fork");
+     }
+ 
+     @Override
+@@ -53,7 +53,7 @@ public class PurpurCommand extends Command {
+             }
+             console.server.reloadCount++;
+ 
+-            Command.broadcastCommandMessage(sender, ChatColor.GREEN + "Purpur config reload complete.");
++            Command.broadcastCommandMessage(sender, ChatColor.GREEN + "Fork config reload complete.");
+         } else if (args[0].equalsIgnoreCase("version")) {
+             Command verCmd = org.bukkit.Bukkit.getServer().getCommandMap().getCommand("version");
+             if (verCmd != null) {
+diff --git a/src/main/java/org/purpurmc/purpur/PurpurConfig.java b/src/main/java/org/purpurmc/purpur/PurpurConfig.java
+index e3e29e33dd77ce4a775fc9e80fb0603f2dcc8e5d..5034130ec729b5aff7102e5d12226e018e4fa33d 100644
+--- a/src/main/java/org/purpurmc/purpur/PurpurConfig.java
++++ b/src/main/java/org/purpurmc/purpur/PurpurConfig.java
+@@ -22,7 +22,7 @@ import org.bukkit.command.Command;
+ import org.bukkit.configuration.ConfigurationSection;
+ import org.bukkit.configuration.InvalidConfigurationException;
+ import org.bukkit.configuration.file.YamlConfiguration;
+-import org.purpurmc.purpur.command.PurpurCommand;
++import net.wondersmc.fork.command.ForkCommand;
+ import org.purpurmc.purpur.task.TPSBarTask;
+ 
+ import java.io.File;
+@@ -73,7 +73,7 @@ public class PurpurConfig {
+         verbose = getBoolean("verbose", false);
+ 
+         commands = new HashMap<>();
+-        commands.put("purpur", new PurpurCommand("purpur"));
++        commands.put("fork", new ForkCommand("fork"));
+ 
+         version = getInt("config-version", 32);
+         set("config-version", 32);

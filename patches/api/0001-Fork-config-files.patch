@@ -1,0 +1,24 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: AshlynDev <mail@ashlyn.nl>
+Date: Sat, 10 Jun 2023 16:14:56 +0200
+Subject: [PATCH] Fork config files
+
+
+diff --git a/src/main/java/org/bukkit/Server.java b/src/main/java/org/bukkit/Server.java
+index 96160bced90bb4cd84e48c85c645cad0eb672b85..7b913e16c5aabcce089a5c15328205659708a1f6 100644
+--- a/src/main/java/org/bukkit/Server.java
++++ b/src/main/java/org/bukkit/Server.java
+@@ -2006,6 +2006,13 @@ public interface Server extends PluginMessageRecipient, net.kyori.adventure.audi
+         }
+         // Purpur end
+ 
++        // Fork start
++        @NotNull
++        public org.bukkit.configuration.file.YamlConfiguration getForkConfig() {
++            throw new UnsupportedOperationException("Not supported yet.");
++        }
++        // Fork end
++
+         /**
+          * Sends the component to the player
+          *
