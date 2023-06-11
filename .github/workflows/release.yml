@@ -27,25 +27,13 @@ jobs:
       - name: Create Reobf Paperclip JAR
         run: ./gradlew createReobfPaperclipJar
 
-      - name: Get JAR file name
-        id: jar_name
-        run: echo "::set-output name=jar_name::$(ls -1 builds/libs/*paperclip*.jar)"
-
-      - name: Extract version from JAR file name
-        id: version
-        run: echo "::set-output name=version::$(echo ${{ steps.jar_name.outputs.jar_name }} | sed -n 's/.*-\([^-]*\)-reobf.jar/\1/p')"
-
-      - name: Get Commit Message
-        id: commit_message
-        run: echo "::set-output name=commit_message::$(git log --format=%B -n 1 ${{ github.sha }})"
-
       - name: Publish JAR as Release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.run_number }}-${{ steps.version.outputs.version }}-${{ steps.commit_message.outputs.commit_message }}  # Generate tag name
-          release_name: Release ${{ steps.version.outputs.version }} (${{ steps.commit_message.outputs.commit_message }})  # Generate release name
+          tag_name: v${{ github.run_number }}  # Generate tag name based on the run number
+          release_name: Release v${{ github.run_number }}  # Specify the release name
           draft: false
           prerelease: true
           files: |
