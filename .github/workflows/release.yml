@@ -1,5 +1,3 @@
-name: Build and Publish JAR
-
 on:
   push:
     branches:
@@ -15,11 +13,8 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: temurin
+          java-version: '17'
           ref: 'ver/1.20'  # Specify the branch name
-      - name: Set up Java
-        uses: actions/setup-java@v2
-        with:
-          java-version: 17
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
