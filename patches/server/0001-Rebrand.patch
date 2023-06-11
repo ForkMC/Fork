@@ -35,7 +35,7 @@ index 462a6eed350fd660ddaf25d567bb6e97b77d0b2b..cca6758a92dcb31162ddbda6f4f45751
      private static final java.util.regex.Pattern VER_PATTERN = java.util.regex.Pattern.compile("^([0-9\\.]*)\\-.*R"); // R is an anchor, will always give '-R' at end
      // Purpur start
 -    private static final String DOWNLOAD_PAGE = "https://purpurmc.org/downloads";
-+    private static final String DOWNLOAD_PAGE = "https://github.com/ForkMC/Fork/releases/latest"; // Fork
++    private static final String DOWNLOAD_PAGE = "https://forkmc.github.io/Website/download"; // Fork
      private static int distance = -2; public int distance() { return distance; }
      // Purpur end
      private static @Nullable String mcVer;
