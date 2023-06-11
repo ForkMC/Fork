@@ -15,6 +15,9 @@ jobs:
           distribution: temurin
           java-version: '17'
           ref: 'ver/1.20'  # Specify the branch name
+      - name: Configure Git
+        run: git config --global user.email "no-reply@github.com" && git config --global user.name "Github Actions"
+        
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
