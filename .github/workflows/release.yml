@@ -34,7 +34,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: EXP-1.20-Build-${{ github.run_number }}  # Generate tag name based on the run number
-          release_name: 1.20 Build ${{ github.run_number }}  # Specify the release name
+          name: 1.20 Build ${{ github.run_number }}  # Specify the release name
           draft: false
           prerelease: true
           files: build/libs/fork-paperclip-1.20-R0.1-SNAPSHOT-reobf.jar
