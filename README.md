@@ -8,7 +8,7 @@ Coming soon!
 
 ## Authors
 
-- [AshlynDev](https://www.github.com/AshlynDev) - Kind of sad that I'm the only one but sure
+- [AshlynDev](https://www.github.com/AshlynDev)
 - [Purpur Contributer](https://github.com/PurpurMC/Purpur/graphs/contributors)
 - [Paper Contributers](https://github.com/PaperMC/Paper/graphs/contributors)
 - Spigot Contributors
