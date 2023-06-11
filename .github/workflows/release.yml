@@ -1,3 +1,4 @@
+name: Release JARs
 on:
   push:
     branches:
@@ -37,4 +38,4 @@ jobs:
           draft: false
           prerelease: true
           files: |
-            builds/libs/*  # Publish all files inside the builds/libs directory
+            build/libs/*  # Publish all files inside the build/libs directory
