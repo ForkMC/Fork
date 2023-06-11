@@ -6,7 +6,7 @@ Coming soon!
 [![forthebadge](https://forthebadge.com/images/badges/fixed-bugs.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/not-a-bug-a-feature.svg)](https://forthebadge.com)
 
-## Authors
+## Contributers
 
 - [AshlynDev](https://www.github.com/AshlynDev)
 - [Purpur Contributer](https://github.com/PurpurMC/Purpur/graphs/contributors)
