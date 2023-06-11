@@ -38,4 +38,4 @@ jobs:
           release_name: Release Version ${{ github.run_number }}  # Specify the release name
           draft: false
           prerelease: true
-          file: build/libs/fork-paperclip-1.20-R0.1-SNAPSHOT-reobf.jar
+          files: build/libs/fork-paperclip-1.20-R0.1-SNAPSHOT-reobf.jar
