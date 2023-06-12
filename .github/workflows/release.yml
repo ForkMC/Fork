@@ -1,4 +1,4 @@
-name: Release JARs
+name: Create Paperclip Release
 on:
   push:
     branches:
