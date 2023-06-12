@@ -3,6 +3,7 @@
 
 Coming soon!
 
+[![Build](https://github.com/ForkMC/Fork/actions/workflows/build.yml/badge.svg)](https://github.com/ForkMC/Fork/actions/workflows/build.yml)
 [![forthebadge](https://forthebadge.com/images/badges/fixed-bugs.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/not-a-bug-a-feature.svg)](https://forthebadge.com)
 
