@@ -2,7 +2,7 @@
 # Fork
 [![Build](https://github.com/ForkMC/Fork/actions/workflows/build.yml/badge.svg)](https://github.com/ForkMC/Fork/actions/workflows/build.yml)
 
-Coming soon!
+Download the latest release [here](https://forkmc.github.io/fork/download)
 
 [![forthebadge](https://forthebadge.com/images/badges/fixed-bugs.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/not-a-bug-a-feature.svg)](https://forthebadge.com)
