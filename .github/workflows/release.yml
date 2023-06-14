@@ -45,9 +45,9 @@ jobs:
             This release contains the Paperclip JAR for the Minecraft server software version 1.20.1.
 
             Release Highlights:
-            - Bug fixes and performance improvements.
-            - Compatibility updates.
-            - Added new features for enhanced gameplay.
+            - Fixed MC-98160.
+            - Fixed MC-105103.
+            - Fixed MC-93826.
 
             Please refer to the [Docs](https://forkmc.github.io/fork/docs) for more information on how to use this JAR.
 
