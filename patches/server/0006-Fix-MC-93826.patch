@@ -1,0 +1,36 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: AshlynDev <bennovandorst@gmail.com>
+Date: Wed, 14 Jun 2023 16:26:12 +0200
+Subject: [PATCH] Fix MC-93826
+
+
+diff --git a/src/main/java/net/minecraft/world/entity/Entity.java b/src/main/java/net/minecraft/world/entity/Entity.java
+index 6417fd26d7675c967986055067ce8876a1263e9f..4bc61c8d0c3be1cda074da799586082e3cc42d81 100644
+--- a/src/main/java/net/minecraft/world/entity/Entity.java
++++ b/src/main/java/net/minecraft/world/entity/Entity.java
+@@ -289,7 +289,7 @@ public abstract class Entity implements Nameable, EntityAccess, CommandSource {
+     protected int boardingCooldown;
+     @Nullable
+     private Entity vehicle;
+-    private Level level;
++    protected Level level;
+     public double xo;
+     public double yo;
+     public double zo;
+diff --git a/src/main/java/net/minecraft/world/entity/animal/Animal.java b/src/main/java/net/minecraft/world/entity/animal/Animal.java
+index 15feb1baed21b2ed3fb90d68aa9b2b97aa664b15..090009109e6b87adf0144b45e30276eafece0632 100644
+--- a/src/main/java/net/minecraft/world/entity/animal/Animal.java
++++ b/src/main/java/net/minecraft/world/entity/animal/Animal.java
+@@ -300,7 +300,11 @@ public abstract class Animal extends AgeableMob {
+                 double d1 = this.random.nextGaussian() * 0.02D;
+                 double d2 = this.random.nextGaussian() * 0.02D;
+ 
+-                this.level().addParticle(ParticleTypes.HEART, this.getRandomX(1.0D), this.getRandomY() + 0.5D, this.getRandomZ(1.0D), d0, d1, d2);
++                // Fork start - Fix MC-93826
++                if (this.level instanceof ServerLevel serverLevel) {
++                    serverLevel.sendParticles(ParticleTypes.HEART, this.getRandomX(1.0D), this.getRandomY() + 0.5D, this.getRandomZ(1.0D), 1, d0, d1, d2, 0);
++                }
++                // Fork end
+             }
+         } else {
+             super.handleEntityEvent(status);
