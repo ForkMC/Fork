@@ -40,6 +40,8 @@ jobs:
           prerelease: false
           files: build/libs/fork-paperclip-1.20-R0.1-SNAPSHOT-reobf.jar
           body: |
+            Build Number: ${{ github.run_number }}
+            
             This release contains the Paperclip JAR for the Minecraft server software version 1.20.1.
 
             Release Highlights:
@@ -52,5 +54,3 @@ jobs:
             For any questions or issues, feel free to reach out to our support team.
 
             Happy crafting!
-
-            Build Number: ${{ github.run_number }}
