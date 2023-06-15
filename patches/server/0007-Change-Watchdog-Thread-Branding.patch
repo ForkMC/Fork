@@ -31,7 +31,7 @@ index 0801dea155048ac5383295f4fef9bd597b678535..57112a0693db2c0dd0d3564f23d45d71
                  } else
                  {
 -                    log.log(Level.SEVERE, "--- DO NOT REPORT THIS TO PURPUR - THIS IS NOT A BUG OR A CRASH  - " + Bukkit.getServer().getVersion() + " ---"); // Purpur
-+                    log.log(Level.SEVERE, "--- DO NOT REPORT THIS TO Fork - THIS IS NOT A BUG OR A CRASH  - " + Bukkit.getServer().getVersion() + " ---"); // Purpur // Fork
++                    log.log(Level.SEVERE, "--- DO NOT REPORT THIS TO FORK - THIS IS NOT A BUG OR A CRASH  - " + Bukkit.getServer().getVersion() + " ---"); // Purpur // Fork
                      log.log(Level.SEVERE, "The server has not responded for " + (currentTime - lastTick) / 1000 + " seconds! Creating thread dump");
                  }
                  // Paper end - Different message for short timeout
