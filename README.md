@@ -28,6 +28,3 @@ Download the latest release [here](https://forkmc.github.io/fork/download)
 Contributions are always welcome! (Only if I like you tho)
 
 This readme will eventually contain instructions regarding the patch system. For now, visit Purpur's [CONTRIBUTING.md](https://github.com/PurpurMC/Purpur/blob/HEAD/CONTRIBUTING.md).
-
-
-![logo](https://cdn.ashlyn.nl/assets/images/Fork.png)
